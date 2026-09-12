@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="820" width="380" height="630" fill="#f3a6c6"/>
+  <path d="M48 48H1152M48 444H1152" stroke="#000000" stroke-width="3"/>
+  <text x="38" y="354" fill="#000000" font-family="Helvetica Neue, Arial, PingFang SC, sans-serif" font-size="250" font-weight="800" letter-spacing="-26">虎義</text>
+  <text x="48" y="548" fill="#000000" font-family="Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700">HUYI</text>
+  <text x="330" y="538" fill="#000000" font-family="Helvetica Neue, Arial, PingFang SC, sans-serif" font-size="30">音乐、旅行、设计与摄影。</text>
+</svg>
