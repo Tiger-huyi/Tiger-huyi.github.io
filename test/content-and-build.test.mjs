@@ -26,7 +26,8 @@ test('无音乐时仍生成静态首页、音乐归档和干净发布目录', as
     fs.readFile(path.join(root, 'dist', 'music', 'index.html'), 'utf8'),
     fs.readFile(path.join(root, 'dist', 'sitemap.xml'), 'utf8')
   ]);
-  assert.match(home, /<h1[^>]*>虎義<\/h1>/u);
+  assert.match(home, /<h1[^>]*lang="ja"[^>]*aria-label="虎義"[^>]*>/u);
+  assert.match(home, /<span>虎<\/span><span class="name-accent">義<\/span>/u);
   assert.match(home, /还没有分享音乐/u);
   assert.match(music, /音乐分享/u);
   assert.match(sitemap, /\/music\//u);

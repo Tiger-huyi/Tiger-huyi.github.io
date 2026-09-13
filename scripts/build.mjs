@@ -25,7 +25,7 @@ function header(current = '') {
 }
 
 function footer() {
-  return `<footer class="site-footer grid-shell"><p class="footer-name">虎義<br><span>HUYI</span></p><p>音乐、旅行、设计与摄影。</p><p>© 2026 HUYI</p><a class="text-link" href="#main">返回顶部</a></footer>`;
+  return `<footer class="site-footer grid-shell"><p class="footer-name"><span class="name-ja" lang="ja">虎義</span><br><span>HUYI</span></p><p>音乐、旅行、设计与摄影。</p><p>© 2026 HUYI</p><a class="text-link" href="#main">返回顶部</a></footer>`;
 }
 
 function renderTrack(record) {
