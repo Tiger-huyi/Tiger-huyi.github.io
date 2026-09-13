@@ -1,0 +1,16 @@
+{
+  "name": "huyi-personal-site",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "music:editor": "node scripts/editor-server.mjs",
+    "content:check": "node scripts/validate-content.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

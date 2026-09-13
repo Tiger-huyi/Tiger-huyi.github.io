@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title">
+  <title id="title">暂无封面</title>
+  <rect width="640" height="640" fill="#fce8f0"/>
+  <path d="M0 320h640M320 0v640" stroke="#111" stroke-width="2"/>
+  <text x="40" y="590" fill="#595959" font-family="Arial, sans-serif" font-size="30">暂无封面</text>
+</svg>

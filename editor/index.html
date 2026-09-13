@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>音乐维护｜虎義 HUYI</title>
+  <style>
+    :root{font-family:"Helvetica Neue",Helvetica,Arial,"PingFang SC",sans-serif;color:#111;background:#fff;line-height:1.6}*{box-sizing:border-box}body{margin:0}main{width:min(100% - 2rem,62rem);margin:auto;padding:2rem 0 5rem}h1{font-size:clamp(2.8rem,8vw,6rem);line-height:.9;letter-spacing:-.06em;margin:0 0 3rem}form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 1rem;border-top:1px solid #111;padding-top:1.5rem}label{display:grid;gap:.4rem;font-weight:600}.wide{grid-column:1/-1}input,textarea{width:100%;padding:.75rem;border:1px solid #595959;border-radius:0;background:#fff;font-size:1rem}textarea{min-height:7rem;resize:vertical}.actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}button{min-height:44px;padding:.65rem 1rem;border:1px solid #111;border-radius:0;background:#f3a6c6;font-weight:600;cursor:pointer}button.secondary{background:#fff}button:disabled{opacity:.5;cursor:wait}:focus-visible{outline:3px solid #8f2457;outline-offset:3px}.status{grid-column:1/-1;min-height:1.6rem;margin:0;color:#595959}.preview{grid-column:1/-1;display:grid;grid-template-columns:7rem 1fr;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid #d9d9d9}.preview img{width:7rem;aspect-ratio:1;object-fit:contain;background:#fce8f0;border:1px solid #d9d9d9}.help{margin-bottom:2rem;max-width:46rem}.check{display:flex;align-items:center;gap:.6rem;font-weight:400}.check input{width:auto}@media(max-width:640px){form{grid-template-columns:1fr}.preview{grid-template-columns:5rem 1fr}.preview img{width:5rem}}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>音乐维护</h1>
+    <p class="help">粘贴网易云单曲链接或整段分享文字，提取后核对内容。保存到待发布内容只会修改本地项目；运行网站发布流程后才会在线显示。</p>
+    <form id="music-form">
+      <label class="wide">网易云歌曲链接<textarea id="source" placeholder="粘贴歌曲链接，也可以粘贴整段分享文字。"></textarea></label>
+      <div class="actions"><button type="button" id="resolve">提取歌曲信息</button></div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <label>歌曲编号<input id="songId" inputmode="numeric" readonly required></label>
+      <label>歌名<input id="title" required></label>
+      <label>歌手，用 / 分隔<input id="artists"></label>
+      <label>专辑<input id="albumTitle"></label>
+      <label>封面地址<input id="coverUrl" type="url"></label>
+      <label class="wide">推荐语<textarea id="recommendation" maxlength="240"></textarea></label>
+      <label>分享日期<input id="sharedAt" type="date" required></label>
+      <label class="check"><input id="showDate" type="checkbox" checked>在网站显示分享日期</label>
+      <div class="preview" id="preview" hidden><img id="preview-cover" alt=""><div><strong id="preview-title"></strong><p id="preview-artists"></p></div></div>
+      <div class="actions"><button type="button" class="secondary" id="draft">保存为草稿</button><button type="submit">保存到待发布内容</button><button type="button" class="secondary" id="build">生成网站预览</button></div>
+    </form>
+  </main>
+  <script>window.EDITOR_TOKEN={{TOKEN_JSON}};</script>
+  <script src="/app.js"></script>
+</body>
+</html>

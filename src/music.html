@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>音乐分享｜虎義 HUYI</title>
+  <meta name="description" content="虎義 HUYI 分享的音乐。听到喜欢的，就留在这里。">
+  <link rel="canonical" href="https://tiger-huyi.github.io/music/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  {{HEADER}}
+  <main id="main">
+    <section class="archive-hero grid-shell">
+      <h1>音乐分享</h1>
+      <p>听到喜欢的，就留在这里。</p>
+    </section>
+    <section class="archive-content grid-shell" aria-label="全部音乐分享">
+      <div class="track-list archive-track-list">{{MUSIC_LIST}}</div>
+      {{PAGINATION}}
+    </section>
+  </main>
+  {{FOOTER}}
+</body>
+</html>
